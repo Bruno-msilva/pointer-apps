@@ -16,7 +16,7 @@ module "pointer_sg" {
       from_port = 22
       to_port = 22
       protocol = "tcp"
-      description - "porta SSH"
+      description = "porta SSH"
       cidr_blocks = "0.0.0.0/0"
     },
   ]
@@ -25,7 +25,7 @@ module "pointer_sg" {
 
 module "ec2_instance" {
   source = "terraform-aws-modules/ec2-instance/aws"
-  version = "-> 3.0"
+  version = "~> 3.0"
 
   name = "Pointer"
 
